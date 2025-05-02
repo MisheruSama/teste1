@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>💌 Um Quiz Especial 💌</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #c71585;
+    }
+    .pergunta {
+      margin-bottom: 30px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+    .resultado {
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💐 Um Quiz Especial pra Você 💐</h1>
+
+ <!-- substitua o bloco de botões da flor por este -->
+<button onclick="redirecionarFlor('girassol')">Girassol</button>
+<button onclick="redirecionarFlor('rosa')">Rosa</button>
+<button onclick="redirecionarFlor('tulipa')">Tulipa</button>
+<button onclick="redirecionarFlor('orquidea')">Orquídea</button>
+
+<script>
+  function redirecionarFlor(flor) {
+    window.location.href = `/DJ/flor.html?flor=${flor}`;
+  }
+</script>
+</body>
+</html>

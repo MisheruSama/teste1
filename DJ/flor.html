@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sua Flor 🌺</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #fffafc;
+      font-family: sans-serif;
+    }
+    h1 {
+      margin-top: 40px;
+      color: #d63384;
+    }
+    iframe {
+      width: 80%;
+      height: 450px;
+      margin-top: 20px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Essa flor é tão linda quanto você 💖</h1>
+  <div id="flor-container"></div>
+
+  <!-- Música de fundo -->
+  <audio id="musica" autoplay loop>
+    <source src="https://www.youtube.com/watch?v=X9YHnImcww0" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const flor = params.get("flor");
+
+    const container = document.getElementById("flor-container");
+
+    if (flor === "girassol") {
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube.com/embed/qT1Dun7Z068?autoplay=1&loop=1";
+      container.appendChild(iframe);
+    } 
+    else if (flor === "rosa") {
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube.com/embed/IFajtUWgpnk?autoplay=1&loop=1";
+      container.appendChild(iframe);
+    } 
+    else if (flor === "tulipa") {
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube.com/embed/Qyh5hn_P15Q?autoplay=1&loop=1";
+      container.appendChild(iframe);
+    } 
+    else {
+      container.textContent = "Flor não encontrada.";
+    }
+  </script>
+
+  <div id="poema" style="margin-top: 30px; padding: 0 20px; font-size: 1.2em; color: #a52a2a; font-family: 'Georgia', serif; line-height: 1.6;">
+    <p>Para Nicoly,</p>
+    <p>Como uma flor que floresce sem pressa,</p>
+    <p>Você encanta com leveza e beleza.</p>
+    <p>Seu sorriso ilumina como o sol da manhã,</p>
+    <p>Seu jeito é poesia, suave e sã.</p>
+    <p>És especial, és rara, és encanto em flor,</p>
+    <p>Com você, tudo ganha mais cor.</p>
+    <br>
+    <p>Eu não poderia ter sido mais abençoado ao conhecer alguém como você.</p>
+    <p>Cada traço seu me apaixona mais e mais,</p>
+    <p>E através de você tenho aprendido a amar pela fé.</p>
+    <p>Pois conhecer você veio da fé.</p>
+    <p>Eu te amo, Nicoly,</p>
+    <p>Pois através de você, Deus tem me feito crer novamente no amor.</p>
+  </div>
+
+</body>
+</html>
